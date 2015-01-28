@@ -1,0 +1,15 @@
+HOW TO FLASH THE POWER BOARD
+============================
+
+* Install arm-none-eabi toolchain (Ubuntu: sudo apt-get install arm-none-eabi-gcc)
+* Install stm32flash (Ubuntu: sudo apt-get install stm32flash)
+* Recursively init/update all submodules (git submodule --recursive --init update)
+* cd libopencm3
+* make
+* cd ../dfu-bootloader/libopencm3
+* make
+* cd ../..
+* make
+* Connect a 3.3V USB-to-6-pin-UART cable (though 5V won't break the board, it's also not recommended)
+* Flash pbv4.bin to the power board:
+** stm32flash -b 115200 -w pbv4.bin /dev/ttyUSB0
