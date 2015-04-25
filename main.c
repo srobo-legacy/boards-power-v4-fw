@@ -34,7 +34,7 @@ static uint32_t on_time; // Measured in milliseconds
 // configured below, and cause UVLO or current-cutoff at the configured limits.
 #define CURRENT_IIR_DECAY 100
 #define VOLTAGE_IIR_DECAY 100
-#define CURRENT_IIR_MAXVAL 10000 * CURRENT_IIR_DECAY /* 10A */
+#define CURRENT_IIR_MAXVAL 30000 * CURRENT_IIR_DECAY /* 30A */
 #define VOLTAGE_IIR_MINVAL 10200 * VOLTAGE_IIR_DECAY /* 10.2V */
 
 static uint32_t current_iir = CURRENT_IIR_MAXVAL;
